@@ -17,7 +17,7 @@ import {
 } from "@mui/icons-material";
 
 export default function Header() {
-    const { showForm, setShowForm, mode, setMode, setShowDrawer } = useApp();
+    const { showForm, setShowForm, mode, setMode, showDrawer, setShowDrawer } = useApp();
 
     return (
         <AppBar position="static">
@@ -25,7 +25,7 @@ export default function Header() {
                 <IconButton
                     color="inherit"
                     edge="start"
-                    onClick={() => setShowDrawer(true)} 
+                    onClick={() => setShowDrawer(!showDrawer)} 
                 >
                     <MenuIcon />
                 </IconButton>
